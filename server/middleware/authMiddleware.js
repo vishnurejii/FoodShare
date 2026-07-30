@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-const SECRET = "foodshare123";
+const SECRET = process.env.JWT_SECRET || "foodshare123";
 
 const verifyToken = (req, res, next) => {
     try {
